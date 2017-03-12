@@ -8,7 +8,8 @@
 
 from tkinter import *
 import tkinter as tk
-import ftgui, ftfunc
+import ftgui
+import ftfunc
 
 
 class ParentWindow(Frame):
@@ -16,15 +17,14 @@ class ParentWindow(Frame):
     
         # define master frame config and center window
         self.master = master
-        self.master.minsize(300,200)
-        self.master.maxsize(300,200)
+        self.master.minsize(300, 200)
+        self.master.maxsize(300, 200)
         ftfunc.center_window(self, 300, 200)
 
         # title and background
         self.master.title("Fresh File Transfer")
         self.master.configure(bg="#F0F0F0")
 
-        
         # sourcePath, destPath and lastTrans get passed around a lot through this program, so best to init them now
         self.sourcePath = ""
         self.destPath = ""
@@ -32,7 +32,7 @@ class ParentWindow(Frame):
         
         # widgets are in the gui module--time to load them
         ftgui.load_gui(self)
-	    
+
 
 if __name__ == "__main__":
     root = tk.Tk()
