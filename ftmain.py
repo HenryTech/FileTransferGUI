@@ -13,6 +13,7 @@ import ftfunc
 
 
 class ParentWindow(Frame):
+
     def __init__(self, master):
     
         # define master frame config and center window
